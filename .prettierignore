@@ -1,0 +1,7 @@
+.git/
+.rts2*
+node_modules/
+assets/
+dist/
+package.json
+tsconfig.json
