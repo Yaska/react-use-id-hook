@@ -1,8 +1,13 @@
 {
   "name": "react-use-id-hook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "module": "dist/react-use-id-hook.esm.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yaska/react-use-id-hook.git"
+  },
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
