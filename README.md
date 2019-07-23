@@ -20,9 +20,15 @@ This hook returns a function that returns unique ids. To use it, the same rule a
 
 > always call it in the same order, without control flow
 
+## Installation
+
+1. Install the `react-use-id-hook` NPM package with your favorite package manager.
+2. Wrap your top-level component with `<IdProvider>`
+3. In your components, use `useId()` or `useGetId()` as appropriate.
+
 ## Example
 
-Also see the `example/` folder.
+[See the full example](https://github.com/Yaska/react-use-id-hook/blob/master/example/index.tsx).
 
 ```js
 const CheckBox = ({value, onChange}) => {
