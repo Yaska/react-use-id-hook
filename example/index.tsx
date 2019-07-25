@@ -62,11 +62,17 @@ const App = () => {
 	const [checked, handleChecked] = React.useState(false)
 	const [num, handleNum] = React.useState(0)
 	return (
-		<IdProvider>
+		<>
 			<CheckBox value={checked} onChange={handleChecked} />
 			<Radio value={num} onChange={handleNum} />
-		</IdProvider>
+		</>
 	)
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+const WrappedApp = () => (
+		<IdProvider>
+			<App />
+		</IdProvider>
+)	
+
+ReactDOM.render(<WrappedApp />, document.getElementById('root'))
