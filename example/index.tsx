@@ -11,7 +11,7 @@ const CheckBox = ({
 	onChange(value: boolean): void
 }) => {
 	const id = useId()
-	const handleChange = React.useCallback(ev => onChange(ev.target.checked), [
+	const handleChange = React.useCallback((ev) => onChange(ev.target.checked), [
 		onChange,
 	])
 	return (
@@ -30,10 +30,10 @@ const Radio = ({
 }) => {
 	const getId = useGetId()
 	const name = getId()
-	const handleChange = React.useCallback(ev => onChange(+ev.target.value), [
+	const handleChange = React.useCallback((ev) => onChange(+ev.target.value), [
 		onChange,
 	])
-	const makeOption = num => {
+	const makeOption = (num) => {
 		const id = getId()
 		return (
 			<div>
@@ -70,9 +70,9 @@ const App = () => {
 }
 
 const WrappedApp = () => (
-		<IdProvider>
-			<App />
-		</IdProvider>
-)	
+	<IdProvider>
+		<App />
+	</IdProvider>
+)
 
 ReactDOM.render(<WrappedApp />, document.getElementById('root'))

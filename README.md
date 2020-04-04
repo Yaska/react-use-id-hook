@@ -40,7 +40,7 @@ const CheckBox = ({value, onChange}) => {
 				id={id}
 				type="checkbox"
 				checked={value}
-				onChange={ev => onChange(ev.target.checked)}
+				onChange={(ev) => onChange(ev.target.checked)}
 			/>
 			<label htmlFor={id}>Click me</label>
 		</>
