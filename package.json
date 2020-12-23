@@ -10,32 +10,50 @@
   },
   "typings": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
+  "engines": {
+    "node": ">=10"
+  },
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "tsdx test --env=jsdom"
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
   },
   "peerDependencies": {
     "react": ">=16"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "tsdx lint"
     }
   },
+  "author": "Wout Mertens",
+  "size-limit": [
+    {
+      "path": "dist/react-use-id-hook.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/react-use-id-hook.esm.js",
+      "limit": "10 KB"
+    }
+  ],
   "devDependencies": {
-    "@types/jest": "^25.2.3",
-    "@types/react": "^16.14.2",
-    "@types/react-dom": "^16.9.10",
+    "@size-limit/preset-small-lib": "^4.9.1",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
     "husky": "^4.3.6",
-    "prettier": "^2.2.1",
-    "pretty-quick": "^2.0.2",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "tsdx": "^0.13.3",
-    "tslib": "^1.14.1",
-    "typescript": "^3.9.7"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "size-limit": "^4.9.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.0.3",
+    "typescript": "^4.1.3"
   }
 }
