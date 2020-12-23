@@ -26,16 +26,16 @@
     }
   },
   "devDependencies": {
-    "@types/jest": "^25.2.1",
-    "@types/react": "^16.9.32",
-    "@types/react-dom": "^16.9.6",
-    "husky": "^4.2.3",
-    "prettier": "^2.0.2",
-    "pretty-quick": "^2.0.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "tsdx": "^0.13.1",
-    "tslib": "^1.11.1",
-    "typescript": "^3.8.3"
+    "@types/jest": "^25.2.3",
+    "@types/react": "^16.14.2",
+    "@types/react-dom": "^16.9.10",
+    "husky": "^4.3.6",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^2.0.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "tsdx": "^0.13.3",
+    "tslib": "^1.14.1",
+    "typescript": "^3.9.7"
   }
 }
